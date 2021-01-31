@@ -1,0 +1,3 @@
+fn hoge() {
+    println!("hogehoge");
+}
