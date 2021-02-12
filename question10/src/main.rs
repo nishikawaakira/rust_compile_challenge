@@ -9,7 +9,6 @@ fn get(&ary: &[i32], index: i64) -> Option<i64> {
     if ary.len() == 0 {
         None
     } else {
-        let index = 0;
         ary.get(index)
     }
 }
