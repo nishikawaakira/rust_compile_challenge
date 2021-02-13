@@ -1,3 +1,3 @@
-fn hoge() {
+pub fn hoge() {
     println!("hogehoge");
 }

@@ -4,7 +4,7 @@ struct Person {
     name: String,
 }
 
-fn name_longer(a: &Person, b: &Person) -> &Person {
+fn name_longer<'a>(a: &'a Person, b: &'a Person) -> &'a Person {
     if a.name.len() > b.name.len() {
         a
     } else {

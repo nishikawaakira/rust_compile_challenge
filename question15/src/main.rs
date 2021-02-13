@@ -1,5 +1,5 @@
 // hello worldが出力されるように修正してください
-fn helloworld() -> &str {
+fn helloworld() -> &'static str {
     "hello world"
 }
 

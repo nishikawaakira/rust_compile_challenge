@@ -1,9 +1,9 @@
 // question13の続きです。構造体とimplを修正してperson.name()が表示できるように修正してください
 #[derive(Debug)]
-struct Person {
-    name: &str,
+struct Person<'a> {
+    name: &'a str,
 }
-impl Person {
+impl Person<'_> {
     fn name(&self) -> &str {
         self.name
     }

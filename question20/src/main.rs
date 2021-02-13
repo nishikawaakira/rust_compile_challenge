@@ -1,11 +1,11 @@
 // SwordとHeroのメンバ変数nameをstr型のまま、lifetime識別子を使用してコンパイルが通るように修正してください
 struct Sword {
-    name: str,
+    name: &'static str,
     damage: i32,
 }
 
 struct Hero {
-    name: str,
+    name: &'static str,
     hp: i32,
     sword: Option<Sword>,
 }

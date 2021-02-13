@@ -5,6 +5,11 @@ fn main() {
 
 fn square(x: Option<i64>) -> Option<i64> {
     match x {
-        Ok(i) => Ok(i * i),
+        Some(i) => Some(i * i),
+        _ => unreachable!(),
     }
 }
+
+// オプショナル型を受けて
+// 値をオプショナル型で返せるように変更
+// エラー型が来た場合等の処理をunreachable!()で実装

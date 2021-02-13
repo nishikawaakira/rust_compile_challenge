@@ -1,1 +1,1 @@
-mod hoge;
+pub mod hoge;

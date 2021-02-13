@@ -53,7 +53,11 @@ trait CarOwnerSay<T: Car, O: Owner> {
     fn say(&self);
 }
 
-impl CarOwnerSay for CarOwner {
+impl<T, O> CarOwnerSay<T, O> for CarOwner<T, O>
+where
+    T: Car,
+    O: Owner,
+{
     fn say(&self) {
         println!("{}, {}", self.car.speed(), self.owner.name());
     }

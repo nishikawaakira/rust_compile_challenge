@@ -19,6 +19,12 @@ where
     }
 }
 
+impl std::fmt::Display for Hoge {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{}", self.a)
+    }
+}
+
 fn main() {
     let hoge = Hoge { a: 100 };
     let ll1: Latlng<f64> = Latlng {
@@ -33,9 +39,9 @@ fn main() {
         lat: "35.6804",
         lng: "47071786",
     };
-    let ll4: Latlng<Hoge> = Latlng {
-        lat: hoge,
-        lng: hoge,
+    let ll4: Latlng<&Hoge> = Latlng {
+        lat: &hoge,
+        lng: &hoge,
     };
     ll1.print();
     ll2.print();
